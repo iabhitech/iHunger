@@ -16,7 +16,7 @@ class App extends Component {
         <Navbar dark color="primary">
           <div className="container">
             <NavbarBrand link="/" tabIndex="1">
-              iFood Hunger
+              Ristorante Con Fusion
             </NavbarBrand>
           </div>
         </Navbar>
