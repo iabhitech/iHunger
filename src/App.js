@@ -1,18 +1,26 @@
 import { Component } from "react";
 import { Navbar, NavbarBrand } from "reactstrap";
 import Menu from "./components/MenuComponent";
+import { DISHES } from "./shared/dishes";
 
-class App extends Component
-{
-  render(){
-    return(
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      dishes: DISHES,
+    };
+  }
+  render() {
+    return (
       <div>
         <Navbar dark color="primary">
           <div className="container">
-            <NavbarBrand link="/" tabIndex="1">iFood Hunger</NavbarBrand>
+            <NavbarBrand link="/" tabIndex="1">
+              iFood Hunger
+            </NavbarBrand>
           </div>
         </Navbar>
-        <Menu/>
+        <Menu dishes={this.state.dishes} />
       </div>
     );
   }
