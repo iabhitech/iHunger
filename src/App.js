@@ -1,29 +1,20 @@
 import { Component } from "react";
-import { Navbar, NavbarBrand } from "reactstrap";
-import Menu from "./components/MenuComponent";
-import { DISHES } from "./shared/dishes";
+import Main from "./components/MainComponent";
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      dishes: DISHES,
-    };
-  }
   render() {
-    return (
-      <div>
-        <Navbar dark color="primary">
-          <div className="container">
-            <NavbarBrand link="/" tabIndex="1">
-              Ristorante Con Fusion
-            </NavbarBrand>
-          </div>
-        </Navbar>
-        <Menu dishes={this.state.dishes} />
-      </div>
-    );
+    return <Main />;
   }
 }
 
 export default App;
+
+/* 
+Types of component in React:
+1. Presentaional Components: only render the html.
+2. Container Components: container logics, states etc.
+
+Implementing components in React:
+1. Class Component: using class, has state, hooks etc.
+2. Functional Component: using function, only has props.
+*/
