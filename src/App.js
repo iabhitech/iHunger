@@ -1,11 +1,13 @@
 import Main from "./components/MainComponent";
 import "./App.css";
-const App = () => <Main />;
+import { BrowserRouter } from "react-router-dom";
+
+const App = () => {
+  return (
+    <BrowserRouter>
+      <Main />
+    </BrowserRouter>
+  );
+};
 
 export default App;
-
-/* 
-Types of component implementation in React:
-1. Class Component: using class, has state, hooks etc.
-2. Functional Component: using function, only has props.
-*/
