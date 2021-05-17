@@ -1,4 +1,5 @@
-import { Card, CardBody, CardImg, CardText, CardTitle } from "reactstrap";
+import { Link } from "react-router-dom";
+import { Breadcrumb, BreadcrumbItem, Card, CardBody, CardImg, CardText, CardTitle } from "reactstrap";
 
 const RenderDish = ({ dish }) => (
   <Card>
@@ -33,7 +34,21 @@ const DishDetail = (props) => {
   if (!props.dish) return <></>;
 
   return (
-    <div className="container mt-3">
+    <div className="container mt-3 mb-2">
+      <div className="row">
+        <Breadcrumb>
+          <BreadcrumbItem>
+            <Link to="/menu">Menu</Link>
+          </BreadcrumbItem>
+          <BreadcrumbItem active>
+            <Link to={`/menu/${props.dish.id}`}>{props.dish.name}</Link>
+          </BreadcrumbItem>
+        </Breadcrumb>
+        <div className="col-12">
+          <h3>{props.dish.name}</h3>
+          <hr />
+        </div>
+      </div>
       <div className="row">
         <div className="col-12 col-md-5 m-1">
           <h4>Dish Detail</h4>
@@ -42,7 +57,7 @@ const DishDetail = (props) => {
         <div className="col-12 col-md-5 m-1">
           <h4>Comments</h4>
           <ul className="list-unstyled">
-            <RenderComments comments={props.dish.comments} />
+            <RenderComments comments={props.comments} />
           </ul>
         </div>
       </div>
