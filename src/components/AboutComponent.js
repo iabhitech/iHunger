@@ -10,6 +10,9 @@ const RenderLeader = ({ leader }) => (
     </Media>
     <Media className="ml-4" body>
       <Media heading>{leader.name}</Media>
+      <div>
+        <strong>{leader.designation}</strong>
+      </div>
       {leader.description}
     </Media>
   </Media>
