@@ -3,32 +3,42 @@ import { Breadcrumb, BreadcrumbItem, Card, CardBody, CardImg, CardText, CardTitl
 import CommentForm from "./CommentFormComponent";
 
 const RenderDish = ({ dish }) => (
-  <Card>
-    <CardImg top src={dish.image} alt={dish.name} />
-    <CardBody>
-      <CardTitle>
-        <h6>{dish.name}</h6>
-      </CardTitle>
-      <CardText>{dish.description}</CardText>
-    </CardBody>
-  </Card>
+  <div className="col-12 col-md-5 m-1">
+    <h4>Dish Detail</h4>
+    <Card>
+      <CardImg top src={dish.image} alt={dish.name} />
+      <CardBody>
+        <CardTitle>
+          <h6>{dish.name}</h6>
+        </CardTitle>
+        <CardText>{dish.description}</CardText>
+      </CardBody>
+    </Card>
+  </div>
 );
 
-const RenderComments = ({ comments }) => {
-  const dishComments = comments.map((comment) => {
-    let date = new Date(comment.date);
+const RenderComments = ({ comments, addComment, dishId }) => {
+  if (comments != null)
     return (
-      <li key={comment.id} className="mb-2">
-        <div>{comment.comment}</div>
-        <div>
-          --{comment.author},{" "}
-          {new Intl.DateTimeFormat("en-US", { year: "numeric", month: "short", day: "2-digit" }).format(date)}
-        </div>
-        <hr />
-      </li>
+      <div className="col-12 col-md-5 m-1">
+        <h4>Comments</h4>
+        <ul className="list-unstyled">
+          {comments.map((comment) => (
+            <li key={comment.id} className="mb-2">
+              <div>{comment.comment}</div>
+              <div>
+                --{comment.author},{" "}
+                {new Intl.DateTimeFormat("en-US", { year: "numeric", month: "short", day: "2-digit" }).format(
+                  new Date(comment.date)
+                )}
+              </div>
+              <hr />
+            </li>
+          ))}
+        </ul>
+        <CommentForm dishId={dishId} addComment={addComment} />
+      </div>
     );
-  });
-  return dishComments;
 };
 
 const DishDetail = (props) => {
@@ -51,17 +61,8 @@ const DishDetail = (props) => {
         </div>
       </div>
       <div className="row">
-        <div className="col-12 col-md-5 m-1">
-          <h4>Dish Detail</h4>
-          <RenderDish dish={props.dish} />
-        </div>
-        <div className="col-12 col-md-5 m-1">
-          <h4>Comments</h4>
-          <ul className="list-unstyled">
-            <RenderComments comments={props.comments} />
-          </ul>
-          <CommentForm/>
-        </div>
+        <RenderDish dish={props.dish} />
+        <RenderComments comments={props.comments} addComment={props.addComment} dishId={props.dish.id} />
       </div>
     </div>
   );
