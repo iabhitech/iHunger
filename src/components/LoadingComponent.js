@@ -1,0 +1,6 @@
+export const Loading = () => (
+  <div className="col-12 text-center p-4">
+    <span className="fa fa-spinner fa-pulse fa-3x fa-fw text-primary"></span>
+    <p>Loading...</p>
+  </div>
+);
