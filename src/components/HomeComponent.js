@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Breadcrumb, BreadcrumbItem, Card, CardBody, CardImg, CardSubtitle, CardText, CardTitle } from "reactstrap";
 import { Loading } from "./LoadingComponent";
 import { baseUrl } from "../shared/baseUrl";
+import { FadeTransform } from "react-animation-components";
 
 const RenderCard = ({ item, isLoading, errMess }) => {
   if (isLoading) {
@@ -10,14 +11,21 @@ const RenderCard = ({ item, isLoading, errMess }) => {
     return <h4>{errMess}</h4>;
   } else
     return (
-      <Card>
-        <CardImg src={baseUrl+item.image} alt={item.name} />
-        <CardBody>
-          <CardTitle className="h6">{item.name}</CardTitle>
-          {item.designation ? <CardSubtitle>{item.designation}</CardSubtitle> : null}
-          <CardText>{item.description}</CardText>
-        </CardBody>
-      </Card>
+      <FadeTransform
+        in
+        transformProps={{
+          exitTransform: "scale(0.5) translate(-50%)",
+        }}
+      >
+        <Card>
+          <CardImg src={baseUrl + item.image} alt={item.name} />
+          <CardBody>
+            <CardTitle className="h6">{item.name}</CardTitle>
+            {item.designation ? <CardSubtitle>{item.designation}</CardSubtitle> : null}
+            <CardText>{item.description}</CardText>
+          </CardBody>
+        </Card>
+      </FadeTransform>
     );
 };
 const Home = (props) => (
