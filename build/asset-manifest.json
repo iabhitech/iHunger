@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/iHunger/static/css/main.8f17afe3.chunk.css",
-    "main.js": "/iHunger/static/js/main.48083541.chunk.js",
-    "main.js.map": "/iHunger/static/js/main.48083541.chunk.js.map",
-    "runtime-main.js": "/iHunger/static/js/runtime-main.f0e2e9a1.js",
-    "runtime-main.js.map": "/iHunger/static/js/runtime-main.f0e2e9a1.js.map",
-    "static/css/2.1418cf89.chunk.css": "/iHunger/static/css/2.1418cf89.chunk.css",
-    "static/js/2.4e859b92.chunk.js": "/iHunger/static/js/2.4e859b92.chunk.js",
-    "static/js/2.4e859b92.chunk.js.map": "/iHunger/static/js/2.4e859b92.chunk.js.map",
-    "static/js/3.abff45ce.chunk.js": "/iHunger/static/js/3.abff45ce.chunk.js",
-    "static/js/3.abff45ce.chunk.js.map": "/iHunger/static/js/3.abff45ce.chunk.js.map",
-    "index.html": "/iHunger/index.html",
-    "static/css/2.1418cf89.chunk.css.map": "/iHunger/static/css/2.1418cf89.chunk.css.map",
-    "static/css/main.8f17afe3.chunk.css.map": "/iHunger/static/css/main.8f17afe3.chunk.css.map",
-    "static/js/2.4e859b92.chunk.js.LICENSE.txt": "/iHunger/static/js/2.4e859b92.chunk.js.LICENSE.txt",
-    "static/media/font-awesome.min.css": "/iHunger/static/media/fontawesome-webfont.f691f37e.woff"
+    "main.css": "https://ihunger.iabhitech.com/static/css/main.8f17afe3.chunk.css",
+    "main.js": "https://ihunger.iabhitech.com/static/js/main.64594554.chunk.js",
+    "main.js.map": "https://ihunger.iabhitech.com/static/js/main.64594554.chunk.js.map",
+    "runtime-main.js": "https://ihunger.iabhitech.com/static/js/runtime-main.50a08f6a.js",
+    "runtime-main.js.map": "https://ihunger.iabhitech.com/static/js/runtime-main.50a08f6a.js.map",
+    "static/css/2.0ef626f1.chunk.css": "https://ihunger.iabhitech.com/static/css/2.0ef626f1.chunk.css",
+    "static/js/2.4e859b92.chunk.js": "https://ihunger.iabhitech.com/static/js/2.4e859b92.chunk.js",
+    "static/js/2.4e859b92.chunk.js.map": "https://ihunger.iabhitech.com/static/js/2.4e859b92.chunk.js.map",
+    "static/js/3.abff45ce.chunk.js": "https://ihunger.iabhitech.com/static/js/3.abff45ce.chunk.js",
+    "static/js/3.abff45ce.chunk.js.map": "https://ihunger.iabhitech.com/static/js/3.abff45ce.chunk.js.map",
+    "index.html": "https://ihunger.iabhitech.com/index.html",
+    "static/css/2.0ef626f1.chunk.css.map": "https://ihunger.iabhitech.com/static/css/2.0ef626f1.chunk.css.map",
+    "static/css/main.8f17afe3.chunk.css.map": "https://ihunger.iabhitech.com/static/css/main.8f17afe3.chunk.css.map",
+    "static/js/2.4e859b92.chunk.js.LICENSE.txt": "https://ihunger.iabhitech.com/static/js/2.4e859b92.chunk.js.LICENSE.txt",
+    "static/media/font-awesome.min.css": "https://ihunger.iabhitech.com/static/media/fontawesome-webfont.f691f37e.woff"
   },
   "entrypoints": [
-    "static/js/runtime-main.f0e2e9a1.js",
-    "static/css/2.1418cf89.chunk.css",
+    "static/js/runtime-main.50a08f6a.js",
+    "static/css/2.0ef626f1.chunk.css",
     "static/js/2.4e859b92.chunk.js",
     "static/css/main.8f17afe3.chunk.css",
-    "static/js/main.48083541.chunk.js"
+    "static/js/main.64594554.chunk.js"
   ]
 }
