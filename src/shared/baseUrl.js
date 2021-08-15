@@ -1,1 +1,1 @@
-export const baseUrl = "http://localhost:3001/";
+export const baseUrl = "https://ihunger-f22da-default-rtdb.firebaseio.com/";

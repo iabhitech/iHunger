@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { Breadcrumb, BreadcrumbItem, Card, CardBody, CardImg, CardSubtitle, CardText, CardTitle } from "reactstrap";
 import { Loading } from "./LoadingComponent";
-import { baseUrl } from "../shared/baseUrl";
 import { FadeTransform } from "react-animation-components";
 
 const RenderCard = ({ item, isLoading, errMess }) => {
@@ -18,7 +17,7 @@ const RenderCard = ({ item, isLoading, errMess }) => {
         }}
       >
         <Card>
-          <CardImg src={baseUrl + item.image} alt={item.name} />
+          <CardImg src={item.image} alt={item.name} />
           <CardBody>
             <CardTitle className="h6">{item.name}</CardTitle>
             {item.designation ? <CardSubtitle>{item.designation}</CardSubtitle> : null}
@@ -49,7 +48,7 @@ const Home = (props) => (
         <RenderCard item={props.promotion} isLoading={props.promosLoading} errMess={props.promosErrMess} />
       </div>
       <div className="col-12 col-md m-1">
-        <RenderCard item={props.leader} isLoading={props.leaderLoading} errMess={props.leaderErrMess}/>
+        <RenderCard item={props.leader} isLoading={props.leaderLoading} errMess={props.leaderErrMess} />
       </div>
     </div>
   </div>

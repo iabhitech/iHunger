@@ -9,13 +9,13 @@ export const Comments = (
 ) => {
   switch (action.type) {
     case ActionTypes.ADD_COMMENTS:
-      return { ...state, errMess: null, comments: action.payload };
+      const comments = action.payload || [];
+      return { ...state, errMess: null, comments: comments };
     case ActionTypes.COMMENTS_FAILED:
       return { ...state, errMess: action.payload, comments: [] };
 
     case ActionTypes.ADD_COMMENT:
-      let comment = action.payload;
-      return { ...state, comments: state.comments.concat(comment) };
+      return { ...state, comments: Object.assign(state.comments, action.payload) };
     default:
       return state;
   }

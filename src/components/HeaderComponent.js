@@ -57,7 +57,7 @@ class Header extends Component {
         <Navbar dark expand="sm">
           <div className="container">
             <NavbarBrand className="mr-auto" link="/" tabIndex="1">
-              <img src="assets/images/logo.png" height="30" width="41" alt="Ristorante Con Fusion" />
+              <img src="/assets/img/logo2.png" width="45" alt="Restaurant iHunger" style={{ filter: "invert(1)" }} />
             </NavbarBrand>
             <NavbarToggler onClick={this.toggleNav} />
 
@@ -99,7 +99,7 @@ class Header extends Component {
           <div className="container">
             <div className="row row-header">
               <div className="col-12 col-sm-6">
-                <h1>Ristorante Con Fusion</h1>
+                <h1>Welcome to iHunger</h1>
                 <p>
                   We take inspiration from the World's best cuisines, and create a unique fusion expirence. Our
                   lipsmacking creations will tickle your culinary senses!

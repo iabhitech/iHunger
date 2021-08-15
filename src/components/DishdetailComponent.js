@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import { Breadcrumb, BreadcrumbItem, Card, CardBody, CardImg, CardText, CardTitle } from "reactstrap";
 import CommentForm from "./CommentFormComponent";
 import { Loading } from "./LoadingComponent";
-import { baseUrl } from "../shared/baseUrl";
 import { FadeTransform, Fade, Stagger } from "react-animation-components";
 
 const RenderDish = ({ dish }) => (
@@ -15,7 +14,7 @@ const RenderDish = ({ dish }) => (
       }}
     >
       <Card>
-        <CardImg top src={baseUrl + dish.image} alt={dish.name} />
+        <CardImg top src={"/" + dish.image} alt={dish.name} />
         <CardBody>
           <CardTitle>
             <h6>{dish.name}</h6>
@@ -35,8 +34,8 @@ const RenderComments = ({ comments, postComment, dishId }) => {
         <ul className="list-unstyled">
           <Stagger in>
             {comments.map((comment) => (
-              <Fade in>
-                <li key={comment.id} className="mb-2">
+              <Fade in key={comment.id}>
+                <li className="mb-2">
                   <div>{comment.comment}</div>
                   <div>
                     --{comment.author},{" "}

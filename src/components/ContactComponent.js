@@ -8,7 +8,7 @@ const required = (val) => val && val.length;
 const maxLength = (len) => (val) => !val || val.length <= len;
 const minLength = (len) => (val) => val && val.length >= len;
 const isNumber = (val) => !isNaN(Number(val));
-const validEmail = (val) => /^[A-z0-9._]+@[A-z0-9.-]+\.[A-z]{2,4}$/i.test(val);
+const validEmail = (val) => /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(val);
 
 class Contact extends Component {
   constructor(props) {
@@ -45,17 +45,17 @@ class Contact extends Component {
           <div className="col-12 col-sm-4 offset-sm-1">
             <h5>Our Address</h5>
             <address>
-              121, Clear Water Bay Road
+              121, Block III
               <br />
-              Clear Water Bay, Kowloon
+              New City Road
               <br />
-              HONG KONG
+              Delhi
               <br />
               <i className="fa fa-phone"></i>: +852 1234 5678
               <br />
               <i className="fa fa-fax"></i>: +852 8765 4321
               <br />
-              <i className="fa fa-envelope"></i>: <a href="mailto:confusion@food.net">confusion@food.net</a>
+              <i className="fa fa-envelope"></i>: <a href="mailto:confusion@food.net">contact@iabhitech.com</a>
             </address>
           </div>
           <div className="col-12 col-sm-6 offset-sm-1">
@@ -69,7 +69,7 @@ class Contact extends Component {
               <a role="button" href="tel:+85212345678" className="btn btn-info">
                 <i className="fa fa-skype"></i> Skype
               </a>
-              <a role="button" className="btn btn-success" href="mailto:confusion@food.net">
+              <a role="button" className="btn btn-success" href="mailto:contact@iabhitech.com">
                 <i className="fa fa-envelope-o"></i> Email
               </a>
             </div>

@@ -14,7 +14,7 @@ export const postComment = (dishId, rating, author, comment) => (dispatch) => {
     comment: comment,
   };
   newComment.date = new Date().toISOString();
-  return fetch(baseUrl + "comments", {
+  return fetch(baseUrl + "comments.json", {
     method: "POST",
     body: JSON.stringify(newComment),
     headers: {
@@ -36,7 +36,11 @@ export const postComment = (dishId, rating, author, comment) => (dispatch) => {
       }
     )
     .then((response) => response.json())
-    .then((response) => dispatch(addComment(response)))
+    .then((response) => {
+      comment = {};
+      comment[response.name] = newComment;
+      dispatch(addComment(comment));
+    })
     .catch((error) => {
       console.log("Post Comments ", error.message);
       alert("Your comment could not be posted\nError: " + error.message);
@@ -47,7 +51,7 @@ export const fetchDishes = () => (dispatch) => {
   dispatch(dishesLoading(true));
 
   //fetch from server
-  return fetch(baseUrl + "dishes")
+  return fetch(baseUrl + "dishes.json")
     .then(
       (response) => {
         if (response.ok) return response;
@@ -82,7 +86,7 @@ export const addDishes = (dishes) => ({
 
 export const fetchComments = () => (dispatch) => {
   //fetch from server
-  return fetch(baseUrl + "comments")
+  return fetch(baseUrl + "comments.json")
     .then(
       (response) => {
         if (response.ok) return response;
@@ -115,7 +119,7 @@ export const fetchPromos = () => (dispatch) => {
   dispatch(promosLoading(true));
 
   //fetch from server
-  return fetch(baseUrl + "promotions")
+  return fetch(baseUrl + "promotions.json")
     .then(
       (response) => {
         if (response.ok) return response;
@@ -152,7 +156,7 @@ export const fetchLeaders = () => (dispatch) => {
   dispatch(leadersLoading(true));
 
   //fetch from server
-  return fetch(baseUrl + "leaders")
+  return fetch(baseUrl + "leaders.json")
     .then(
       (response) => {
         if (response.ok) return response;
@@ -196,7 +200,7 @@ export const postFeedback = (values) => (dispatch) => {
     message: values.message,
   };
 
-  return fetch(baseUrl + "feedback", {
+  return fetch(baseUrl + "feedback.json", {
     method: "POST",
     body: JSON.stringify(newFeedback),
     headers: {
