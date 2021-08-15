@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "https://ihunger.iabhitech.com/static/css/main.da075252.chunk.css",
-    "main.js": "https://ihunger.iabhitech.com/static/js/main.64594554.chunk.js",
-    "main.js.map": "https://ihunger.iabhitech.com/static/js/main.64594554.chunk.js.map",
+    "main.js": "https://ihunger.iabhitech.com/static/js/main.c46b3f63.chunk.js",
+    "main.js.map": "https://ihunger.iabhitech.com/static/js/main.c46b3f63.chunk.js.map",
     "runtime-main.js": "https://ihunger.iabhitech.com/static/js/runtime-main.50a08f6a.js",
     "runtime-main.js.map": "https://ihunger.iabhitech.com/static/js/runtime-main.50a08f6a.js.map",
     "static/css/2.0ef626f1.chunk.css": "https://ihunger.iabhitech.com/static/css/2.0ef626f1.chunk.css",
@@ -21,6 +21,6 @@
     "static/css/2.0ef626f1.chunk.css",
     "static/js/2.4e859b92.chunk.js",
     "static/css/main.da075252.chunk.css",
-    "static/js/main.64594554.chunk.js"
+    "static/js/main.c46b3f63.chunk.js"
   ]
 }
