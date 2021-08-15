@@ -56,8 +56,8 @@ class Header extends Component {
       <>
         <Navbar dark expand="sm">
           <div className="container">
-            <NavbarBrand className="mr-auto" link="/" tabIndex="1">
-              <img src="/assets/img/logo2.png" width="45" alt="Restaurant iHunger" style={{ filter: "invert(1)" }} />
+            <NavbarBrand className="mr-auto" link="%PUBLIC_URL%" tabIndex="1">
+              <img src="assets/img/logo2.png" width="45" alt="Restaurant iHunger" style={{ filter: "invert(1)" }} />
             </NavbarBrand>
             <NavbarToggler onClick={this.toggleNav} />
 

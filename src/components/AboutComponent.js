@@ -7,8 +7,8 @@ import { Fade, Stagger } from "react-animation-components";
 // Functional Component that return a Media card for a leader
 const RenderLeader = ({ leader }) => (
   <Media className="mb-5">
-    <Media left href="/assets/img/ceo.jpg" target="_blank">
-      <Media object src="/assets/img/ceo.jpg" alt={leader.name} width="120" />
+    <Media left href="assets/img/ceo.jpg" target="_blank">
+      <Media object src="assets/img/ceo.jpg" alt={leader.name} width="120" />
     </Media>
     <Media className="ml-4" body>
       <Media heading>{leader.name}</Media>
